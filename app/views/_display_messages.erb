@@ -4,8 +4,8 @@
       <p class="text-center">Your Yodalized message!</p>
 
 <p align="center"><% @texts.each do |text| %>
-  <%= text.message %><br>
-  <%= text.yodalized_message %>
+  Message:<%= text.message %><br>
+  Yodalized Message: <%= text.yodalized_message %>
  <% end %></p>
 
 

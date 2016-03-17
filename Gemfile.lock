@@ -21,6 +21,7 @@ GEM
     builder (3.2.2)
     daemons (1.2.3)
     diff-lcs (1.2.5)
+    dotenv (2.1.0)
     eventmachine (1.2.0.1)
     faker (1.6.3)
       i18n (~> 0.5)
@@ -84,6 +85,7 @@ DEPENDENCIES
   activerecord
   activesupport
   bcrypt
+  dotenv
   faker
   pg
   rake

@@ -19,6 +19,7 @@ gem 'rake'
 gem 'shotgun'
 gem 'bcrypt'
 gem 'unirest'
+gem 'dotenv'
 
 group :test do
   gem 'faker'

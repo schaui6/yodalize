@@ -6,6 +6,12 @@ end
 
 post '/messages' do 
   @text = Text.new(message: params[:message])
+  yoda_response = Unirest.get "https://yoda.p.mashape.com/yoda?sentence=#{params[:message]}",
+  headers:{
+    "X-Mashape-Key" => ENV["SECRET"],
+    "Accept" => "text/plain"
+  }
+  @text.yodalized_message = yoda_response.raw_body
   if @text.save
     redirect '/' 
   else
@@ -13,10 +19,3 @@ post '/messages' do
   end
 end
 
-# get 'https://yoda.p.mashape.com/yoda' do
-#   response = Unirest.get "https://yoda.p.mashape.com/yoda?sentence=You+will+learn+how+to+speak+like+me+someday.++Oh+wait.",
-#   headers:{
-#     "X-Mashape-Key" => "YMKaRQHEKnmsh25rHmXIzXI5jvSgp1woPy4jsn8mQqbObRWIsw",
-#     "Accept" => "text/plain"
-#   }
-# end

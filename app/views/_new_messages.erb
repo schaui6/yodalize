@@ -1,15 +1,14 @@
 <div class="container registration">
   <div class="row">
     <div class="col-sm-12">
-      <p class="text-center">Please enter </p>
+      <p class="text-center">Create your Yodalized message!</p>
       
-      <form class="login-form" action="/users" method="post">
-        <p class="errors">
-          <% if params[:errors] != nil %>
-            Oops! <%=params[:errors] %>
-          <% end %>
+      <form class="login-form" action="/messages" method="post">
+        <textarea name="message" class="form-control" id="message" rows="5" placeholder="Enter a message!"></textarea>
+        <p>
+          
         </p>
-       <input type="submit" class="btn btn-default login-button center-block" value="Register">
+       <input type="submit" class="btn btn-default login-button center-block" value="Yodalize it!">
      </form>
    </div>
  </div>

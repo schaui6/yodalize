@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class Text < ActiveRecord::Base
   validates :message, presence: true
   # Remember to create a migration!
   # validates :first_name, :last_name, :user_name, :email, :password_hash, presence: true

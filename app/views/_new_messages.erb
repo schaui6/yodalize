@@ -1,0 +1,16 @@
+<div class="container registration">
+  <div class="row">
+    <div class="col-sm-12">
+      <p class="text-center">Please enter </p>
+      
+      <form class="login-form" action="/users" method="post">
+        <p class="errors">
+          <% if params[:errors] != nil %>
+            Oops! <%=params[:errors] %>
+          <% end %>
+        </p>
+       <input type="submit" class="btn btn-default login-button center-block" value="Register">
+     </form>
+   </div>
+ </div>
+</div>

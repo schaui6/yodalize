@@ -20,7 +20,7 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 require 'bcrypt'
-require 'faker'
+require 'faker' unless production?
 require 'unirest'
 require 'dotenv'
 Dotenv.load

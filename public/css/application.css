@@ -35,3 +35,7 @@
 .errors {
   color: #000000;
 }
+
+img {
+  border-radius: 5px;
+}

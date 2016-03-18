@@ -16,12 +16,12 @@ post '/messages' do
   
     
   if @text.save
-    if request.xhr?
-      erb :_display_messages, layout: false, locals: {texts: @texts}
-    end
-  else
+    # if request.xhr?
+      # erb :_display_messages, layout: false, locals: {texts: @texts}
+    # end
     redirect '/' 
-    # erb :index
+  else
+    erb :index
   end
 end
 

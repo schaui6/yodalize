@@ -3,12 +3,16 @@
     <div class="col-sm-12">
       <p class="text-center">Your Yodalized message!</p>
 
-<p id ="message" align="center"><% @texts.each do |text| %>
-  Message:<%= text.message %><br>
-  Yodalized Message: <%= text.yodalized_message %>
- <% end %></p>
+<p class ="message" align="center">
+  <% @texts.each do |text| %>
+    <div>Message:<%= text.message %><br>
+    Yodalized Message: <span class="spoken_text"><%= text.yodalized_message %></span>
+    <a id="" class="say" href="#"><img src="http://farmingtonfire.org/wp-content/uploads/2015/09/sound_on-512.png" width="16px" height="16px"></a>
+    <audio src="" class="speech" hidden></audio></div>
+    <br><br>
+  <% end %></p>
 
-<center><br><p><a id="hide" href="#">Hide</a></p></center>
+  <center><br><p><a id="hide" href="#">Hide</a></p></center>
     </div>
   </div>
 </div>

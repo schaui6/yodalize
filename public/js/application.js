@@ -25,6 +25,7 @@ var sayText = function(event){
   event.preventDefault();
   var text = $(this).parent().children('.spoken_text').text();
   var msg = new SpeechSynthesisUtterance(text);
+  msg.rate = 0.9;
   window.speechSynthesis.speak(msg);
   // text = encodeURIComponent(text);
   // var url = "https://translate.google.com/translate_tts?ie=UTF-8&q=" + text + "&tl=en"

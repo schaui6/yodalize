@@ -1,12 +1,12 @@
 <div id="display" class="container registration">
   <div class="row">
     <div class="col-sm-12">
-      <p class="text-center">Your Yodalized message!</p>
+      <p class="text-center"><b>Your Yodalized message!</b></p>
 
 <p class ="message" align="center">
   <% @texts.each do |text| %>
-    <div>Message:<%= text.message %><br>
-    Yodalized Message: <span class="spoken_text"><%= text.yodalized_message %></span>
+    <div><b><i>Message:</i></b>  <%= text.message %><br>
+    <b><i>Yodalized Message:</i></b>   <span class="spoken_text"><%= text.yodalized_message %></span>
     <a id="" class="say" href="#"><img src="http://farmingtonfire.org/wp-content/uploads/2015/09/sound_on-512.png" width="16px" height="16px"></a>
     <audio src="" class="speech" hidden></audio></div>
     <br><br>

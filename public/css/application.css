@@ -21,11 +21,15 @@
   padding: 25px;
   width: 450px;
   background-color: #d9534f;
-  height: 600px;
+  height: auto;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   color: #ffffff;
+}
+
+#display {
+  display: none;
 }
 
 .errors {

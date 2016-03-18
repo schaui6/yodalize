@@ -1,14 +1,14 @@
-<div class="container registration">
+<div id="display" class="container registration">
   <div class="row">
     <div class="col-sm-12">
       <p class="text-center">Your Yodalized message!</p>
 
-<p align="center"><% @texts.each do |text| %>
+<p id ="message" align="center"><% @texts.each do |text| %>
   Message:<%= text.message %><br>
   Yodalized Message: <%= text.yodalized_message %>
  <% end %></p>
 
-
+<center><br><p><a id="hide" href="#">Hide</a></p></center>
     </div>
   </div>
 </div>

@@ -4,7 +4,8 @@ get '/' do
   erb :index
 end
 
-post '/messages' do 
+post '/messages' do
+  @texts = Text.all 
   @text = Text.new(message: params[:message])
   yoda_response = Unirest.get "https://yoda.p.mashape.com/yoda?sentence=#{params[:message]}",
   headers:{
@@ -12,10 +13,15 @@ post '/messages' do
     "Accept" => "text/plain"
   }
   @text.yodalized_message = yoda_response.raw_body
+  
+    
   if @text.save
-    redirect '/' 
+    if request.xhr?
+      erb :_display_messages, layout: false, locals: {texts: @texts}
+    end
   else
-    erb :index
+    redirect '/' 
+    # erb :index
   end
 end
 
